@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
-
+import Navbar from "./Navbar"
+import Home from "./Home"
 
 function App() {
   const title = 'Welcome to LJS Homes';
@@ -9,8 +10,9 @@ function App() {
   
   return (
     <div className="App">
+      <Navbar />
       <div className="content">
-        <h1>{title}</h1>
+        <Home />
         <p>Liked {likes} times</p>
         <p>{2021}</p>
         <p>{"Making broken homes happy"}</p>
