@@ -1,14 +1,18 @@
-const Home= () => {
+consconst Home= () => {
+
+  const handleClick = () => {
+    console.log("hello ninjas");
+  }
+  const handleClickAgain = (name, e) => {
+    console.log("hello" + name, e.target);
+  }
   return (
-    <nav className="home">
+      <div className="home">
       <h1>LJS Homes</h1>
-      <div classNames="links">
-        <a href="/">Home</a>
-        <a href="/create">Houses</a>
+        <button onClick={handleClick}>Click me</button>
+        <button onClick={(e) => handleClickAgain('Lisa', e)}>Click me again</button>
       </div>
-    </nav>
   );
-
 }
-export default Home;
 
+export default Home;
