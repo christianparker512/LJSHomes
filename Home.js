@@ -1,22 +1,21 @@
 import {useState} from 'react';
 
 const Home= () => {
-const [name, setName]= useState('Chris');
-const [age, setAge] = useState(25);
-
-  const handleClick = () => {
-    setName('Lisa')
-    setAge(30);
-  }
-  // const handleClickAgain = (name, e) => {
-  //   console.log("hello" + name, e.target);
-  // }
+const [blogs, setBlogs]= useState([
+  {title: 'LJS Homes', body: 'Making Broken Homes Better', author: 'lisa', id: 1},
+  {title: '46 westerleigh', body: '4400 square feet', author: 'lisa', id: 1},
+  {title: '342 waxwood', body: '3/1 1100 square feet', author: 'chris', id: 2},
+]);
+  
   return (
       <div className="home">
-      <h1>LJS Homes</h1>
-      <p>{name}</p>
-        <button onClick={handleClick}>Click me</button>
-        {/* <button onClick={(e) => handleClickAgain('Lisa', e)}>Click me again</button> */}
+        {blogs.map((blog) => (
+            <div className="blog-preview" key={blog.id}>
+              <h2>{blog.title}</h2>
+              <p>Design by </p>
+            </div>
+
+        ))}
       </div>
   );
 }
