@@ -3,7 +3,7 @@ import { useState } from "react";
 const Create = () => {
   const [title, setTitle] = useState('');
   const [body, setBody] = useState('');
-  const [author, setAuthor] = useState('mario');
+  const [author, setAuthor] = useState('lisa');
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -14,7 +14,7 @@ const Create = () => {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(blog)
     }).then(() => {
-      console.log('new blog added');
+      console.log('new project added');
     })
   }
 
@@ -40,8 +40,8 @@ const Create = () => {
           value={author}
           onChange={(e) => setAuthor(e.target.value)}
         >
-          <option value="mario">mario</option>
-          <option value="yoshi">yoshi</option>
+          <option value="lisa">lisa</option>
+          <option value="chris">chris</option>
         </select>
         <button>Add Blog</button>
       </form>
