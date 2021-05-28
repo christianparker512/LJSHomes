@@ -1,9 +1,11 @@
 import { useState } from "react";
+import { useHistory } from "react-router-dom";
 
 const Create = () => {
   const [title, setTitle] = useState('');
   const [body, setBody] = useState('');
-  const [author, setAuthor] = useState('lisa');
+  const [author, setAuthor] = useState('mario');
+  const history = useHistory();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -14,7 +16,8 @@ const Create = () => {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(blog)
     }).then(() => {
-      console.log('new project added');
+      // history.go(-1);
+      history.push('/');
     })
   }
 
@@ -40,8 +43,8 @@ const Create = () => {
           value={author}
           onChange={(e) => setAuthor(e.target.value)}
         >
-          <option value="lisa">lisa</option>
-          <option value="chris">chris</option>
+          <option value="mario">mario</option>
+          <option value="yoshi">yoshi</option>
         </select>
         <button>Add Blog</button>
       </form>
