@@ -3,11 +3,11 @@ import { useState } from "react";
 const Create = () => {
   const [title, setTitle] = useState('');
   const [body, setBody] = useState('');
-  const [author, setAuthor] = useState('mario');
+  const [author, setAuthor] = useState('lisa');
 
   return (
     <div className="create">
-      <h2>Add a New Project</h2>
+      <h2>Add a New project</h2>
       <form>
         <label>Blog title:</label>
         <input 
@@ -30,7 +30,7 @@ const Create = () => {
           <option value="lisa">lisa</option>
           <option value="chris">chris</option>
         </select>
-        <button>Add Blog</button>
+        <button>Add project</button>
       </form>
     </div>
   );
