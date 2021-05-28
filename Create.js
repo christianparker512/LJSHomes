@@ -7,7 +7,7 @@ const Create = () => {
 
   return (
     <div className="create">
-      <h2>Add a New Blog</h2>
+      <h2>Add a New Project</h2>
       <form>
         <label>Blog title:</label>
         <input 
@@ -27,8 +27,8 @@ const Create = () => {
           value={author}
           onChange={(e) => setAuthor(e.target.value)}
         >
-          <option value="mario">mario</option>
-          <option value="yoshi">yoshi</option>
+          <option value="lisa">lisa</option>
+          <option value="chris">chris</option>
         </select>
         <button>Add Blog</button>
       </form>
